@@ -1,6 +1,8 @@
 package com.ptixiakipolitis.tampouras;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -27,10 +29,12 @@ public class MainActivity extends AppCompatActivity {
     Button WikiButton;
     Button CreditsButton;
 
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         PlayButton = (Button)findViewById(R.id.PlayButton);
         PlayButton.setOnClickListener(new View.OnClickListener(){
