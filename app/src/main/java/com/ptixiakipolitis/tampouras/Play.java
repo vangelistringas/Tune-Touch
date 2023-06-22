@@ -5,8 +5,6 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +23,7 @@ public class Play extends AppCompatActivity {
         setContentView(R.layout.activity_play);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        imageView = findViewById(R.id.imageView4);
+        imageView = findViewById(R.id.imageView3);
 
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
     }
